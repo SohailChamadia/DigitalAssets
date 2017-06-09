@@ -1,0 +1,24 @@
+missing module named resource - imported by posix, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+missing module named posix - imported by os, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+missing module named _posixsubprocess - imported by subprocess, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+missing module named 'org.python' - imported by pickle, C:\Users\sohai\Desktop\Lookup\SCET\gui.py, xml.sax
+missing module named readline - imported by cmd, code, pdb, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+excluded module named _frozen_importlib - imported by importlib, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+missing module named _scproxy - imported by urllib.request
+missing module named java - imported by platform, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+missing module named 'java.lang' - imported by platform, C:\Users\sohai\Desktop\Lookup\SCET\gui.py, xml.sax._exceptions
+missing module named vms_lib - imported by platform, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+missing module named termios - imported by tty, getpass, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+missing module named grp - imported by tarfile, shutil, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+missing module named org - imported by copy, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+missing module named Tkinter - imported by ttk, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+missing module named pwd - imported by posixpath, tarfile, shutil, http.server, webbrowser, getpass, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+missing module named ce - imported by os, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+missing module named _dummy_threading - imported by dummy_threading, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+missing module named 'playhouse._speedups' - imported by peewee
+missing module named ConfigParser - imported by pymysql.optionfile
+missing module named __builtin__ - imported by pymysql._compat
+missing module named MySQLdb - imported by peewee
+missing module named psycopg2 - imported by peewee
+missing module named psycopg2cffi - imported by peewee
+missing module named pysqlite2 - imported by peewee
