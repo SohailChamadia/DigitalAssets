@@ -2,6 +2,16 @@ from tkinter import *
 from src.dependencies.Login2 import *
 from tkinter import messagebox
 
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
 root=Tk()
 root.title("Digital Library")
 root.attributes("-fullscreen",True)
@@ -31,7 +41,7 @@ titleframe.rowconfigure(0,weight=2)
 titleframe.rowconfigure(1,weight=1)
 titleframe.rowconfigure(2,weight=1)
 
-img=PhotoImage(file='src/img/logo.png')
+img=PhotoImage(file=resource_path('src\img\logo.png'))
 head=Label(titleframe,image=img,bg="#e3e5e3").grid(row=0,rowspan=3,column=0)
 titlefont=('times',30,'bold')
 Label(titleframe,text="DIGITAL ASSETS",bg="#e3e5e3",
@@ -43,7 +53,7 @@ titlefont=('times',14,'italic')
 Label(titleframe,text="For further details contact: +91-8460766696",bg="#e3e5e3",
            font=titlefont).grid(row=2,column=1)
 
-img2=PhotoImage(file='src/img/logo2.png')
+img2=PhotoImage(file=resource_path('src\img\logo2.png'))
 comp=Label(titleframe,image=img2,bg="#e3e5e3").grid(row=0,rowspan=3,column=2)
 
 bodyframe=Frame(mainframe,bg="#34495e")#"#16a085"
