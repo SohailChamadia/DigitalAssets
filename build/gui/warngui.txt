@@ -10,11 +10,10 @@ missing module named 'java.lang' - imported by platform, C:\Users\sohai\Desktop\
 missing module named vms_lib - imported by platform, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
 missing module named termios - imported by tty, getpass, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
 missing module named grp - imported by tarfile, shutil, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
-missing module named org - imported by copy, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
-missing module named Tkinter - imported by ttk, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
 missing module named pwd - imported by posixpath, tarfile, shutil, http.server, webbrowser, getpass, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
 missing module named ce - imported by os, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
 missing module named _dummy_threading - imported by dummy_threading, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
+missing module named org - imported by copy, C:\Users\sohai\Desktop\Lookup\SCET\gui.py
 missing module named 'playhouse._speedups' - imported by peewee
 missing module named ConfigParser - imported by pymysql.optionfile
 missing module named __builtin__ - imported by pymysql._compat

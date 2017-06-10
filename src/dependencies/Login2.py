@@ -61,7 +61,7 @@ class Login2(LabelFrame):
     def authentication(self):
         try:
             self.db=pw.MySQLDatabase("assets",
-                        host="172.16.1.37",
+                        host="localhost",
                         port=3306,
                         user=self.user.get(),
                         passwd=self.pwd.get())

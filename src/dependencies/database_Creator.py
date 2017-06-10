@@ -3,7 +3,8 @@ import peewee as pw
 db=pw.MySQLDatabase("assets",
                     host="localhost",
                     port=3306,
-                    user="root")
+                    user="root",
+                    password="toor")
 db.connect()
 
 db.execute_sql("""create user 'admin' identified by 'admin';""")

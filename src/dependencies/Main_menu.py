@@ -48,12 +48,10 @@ class Main_menu(Frame):
                               ipadx=16+self.user_cnt,
                               sticky=N+S+W+E)
             self.count+=1
-        print("!")
         self.dashboard=Frame(self,bg="#34495e")
         self.dashboard.grid(row=1,column=0,sticky=N+S+W+E)
         #X=__import__('dashboard')
         #X.Dashboard(self.dashboard,self.db)
-        print("!")
 
         self.content=Frame(self,bg="#34495e")
         self.content.grid(row=1,column=1,sticky=N+S+W+E)
@@ -62,7 +60,6 @@ class Main_menu(Frame):
         self.content.admin_access=self.admin_access
         X=__import__('src.dependencies.Equipment',fromlist=('Equipment'))
         X.Equipment(self.content,self.db,True)
-        print("!")
 
         self.error=Frame(self,bg="#34495e")
         self.error.grid(row=1,column=2,sticky=N+S+W+E)
