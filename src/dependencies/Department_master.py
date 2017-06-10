@@ -123,6 +123,8 @@ class Department_master(LabelFrame):
 
         row+=1
 
+        self.depts.bind('<ButtonRelease-1>',self.update_entry)
+
         Label(self.frame,
               font=errorfont,
               fg="red",bg="#bdc3c7").grid(row=row,
@@ -278,6 +280,13 @@ class Department_master(LabelFrame):
                                   pady=15)
 
         self.pack(anchor=CENTER,expand=1)
+
+    def update_entry(self,event):
+        self.id.delete(0,END)
+        self.name.delete(0,END)
+        dept=self.depts.get(self.depts.curselection()).split(' - ')
+        self.id.insert(0,dept[0])
+        self.name.insert(0,dept[1])
 
     def cmd_call(self):
         if self.mode[1].get():
