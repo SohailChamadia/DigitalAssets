@@ -31,7 +31,7 @@ class Transfer_details(LabelFrame):
                                              sticky=N+S+W+E)
         self.m_id=StringVar();
         self.m_id.set("")
-        self.m_id_opt=combo(self,self.machines,self.m_id)
+        self.m_id_opt=combo(self,self.machines,self.m_id,True)
         self.m_id_opt.grid(row=row,column=1,columnspan=2,sticky=W+E)
         for chl in self.m_id_opt.children.values():
             chl.bind('<Control-space>',self.new_equipment)
