@@ -74,10 +74,11 @@ class Vendor_details(Frame):
               font=textfont,bg="#bdc3c7").grid(row=row,
                                        column=0,
                                        sticky=N+S+W+E)
-        self.ven_name=StringVar();
-        self.ven_name.set("")
-        self.name=combo(self.frame,self.vendors,self.ven_name,False)
-        self.name.grid(row=row,column=1,columnspan=2,sticky=W+E)
+#        self.ven_name=StringVar();
+#        self.ven_name.set("")
+#        self.name=combo(self.frame,self.vendors,self.ven_name,False)
+        self.ven_name=Entry(self.frame)
+        self.ven_name.grid(row=row,column=1,columnspan=2,sticky=W+E)
         row+=1
 
         self.name_err=StringVar()
