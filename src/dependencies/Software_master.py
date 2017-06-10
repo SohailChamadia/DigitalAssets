@@ -207,7 +207,7 @@ class Software_master(LabelFrame):
                                         sticky=N+S+W+E)
         self.vendor=StringVar()
         self.vendor.set(None)
-        self.ven_menu=combo(self.frame,self.vendors,self.vendor)
+        self.ven_menu=combo(self.frame,self.vendors,self.vendor,True)
         self.ven_menu.grid(row=row,
                            column=1,
                            columnspan=2,
