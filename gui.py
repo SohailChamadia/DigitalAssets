@@ -12,7 +12,7 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 root=Tk()
-root.title("Digital Library")
+root.title("Digital Asset Management")
 root.attributes("-fullscreen",True)
 
 def end_fullscreen(self):

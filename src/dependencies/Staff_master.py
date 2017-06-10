@@ -283,7 +283,7 @@ class Staff_master(LabelFrame):
         check_ent(self.name,comp,msg,self.name_err)
         msg.set("Invalid Joining Date")
         check_date(self.join_date,comp,msg,self.join_date_err)
-        if self.email1.get()!="":
+        if self.email1.get()!="" and self.email2.get()!="":
             if self.email1.get()==self.email2.get():
                 self.email1.config(bg="#ffdbdb")
                 self.email2.config(bg="#ffdbdb")

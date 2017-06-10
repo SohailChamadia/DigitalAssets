@@ -156,8 +156,8 @@ def comp_date(date1,date2,flag,msg,error):
 
 def check_cont(ref,flag,msg,error):
     if len(ref.get()) == 10:
-        check_int(ref,flag,msg,error)
         error.set("")
+        check_int(ref,flag,msg,error)
     else:
         error.set(msg.get())
         flag.set(False)

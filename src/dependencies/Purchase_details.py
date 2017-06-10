@@ -115,7 +115,7 @@ class Purchase_details(LabelFrame):
                                             sticky=N+S+W+E)
         self.ven_id=StringVar();
         self.ven_id.set(None)
-        self.ven_opt=combo(self.frame,self.vendors,self.ven_id)
+        self.ven_opt=combo(self.frame,self.vendors,self.ven_id,True)
         self.ven_opt.grid(row=row,column=1,columnspan=2,sticky=W+E)
 
         for chl in self.ven_opt.children.values():

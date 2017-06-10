@@ -111,7 +111,7 @@ class Equipment(Frame):
                                                sticky=N+S+W+E)
         self.type=StringVar()
         self.type.set(None)
-        self.type_option=combo(self.frame,self.item,self.type)
+        self.type_option=combo(self.frame,self.item,self.type,True)
         self.type_option.grid(row=row,
                               column=1,
                               columnspan=2,
@@ -191,7 +191,7 @@ class Equipment(Frame):
                                                 sticky=N+S+W+E)
         self.ven_id=StringVar();
         self.ven_id.set(None)
-        self.ven_opt=combo(self.frame,self.vendors,self.ven_id)
+        self.ven_opt=combo(self.frame,self.vendors,self.ven_id,True)
         self.ven_opt.grid(row=row,column=1,columnspan=2,sticky=W+E)
 
         for chl in self.ven_opt.children.values():
@@ -328,7 +328,7 @@ class Equipment(Frame):
                                                sticky=N+S+W+E)
         self.inc=StringVar();
         self.inc.set("")
-        self.inc_opt=combo(self.frame,self.staff,self.inc)
+        self.inc_opt=combo(self.frame,self.staff,self.inc,True)
         self.inc_opt.grid(row=row,column=1,columnspan=2,sticky=W+E)
 
         if self.master.admin_access:

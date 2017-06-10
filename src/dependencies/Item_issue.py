@@ -62,7 +62,7 @@ class Item_issue(LabelFrame):
                                                sticky=N+S+W+E)
         self.id=StringVar();
         self.id.set("")
-        self.id_opt=combo(self,self.machines,self.id)
+        self.id_opt=combo(self,self.machines,self.id,True)
         self.id_opt.grid(row=row,column=1,sticky=W+E)
         for chl in self.id_opt.children.values():
             chl.bind('<Control-space>',self.new_equipment)
@@ -274,7 +274,7 @@ class Item_issue(LabelFrame):
     def item_return(self):
         self.db.connect()
         cur=self.db.execute_sql("""select * from item_issue
-                                where machine_id='%s' and issue='0';"""
+                                where machine_id='%s' and issue='1';"""
                                 %(self.id.get()))
         data=list(cur.fetchall())
         self.issue.config(state=NORMAL)
@@ -302,16 +302,17 @@ class Item_issue(LabelFrame):
             dpt="("+dpt[0]+")"
         else:
             dpt=str(tuple(dpt))
-        x=self.db.execute_sql("""select item_issue.machine_id from equipment inner join item_issue
-                                on equipment.machine=item_issue.machine_id
-                                where equipment.issuable='1'
-                                and equipment.department in %s and
-                                item_issue.issue='0' and
-                                return_on=NULL;"""%(dpt))
+        x=self.db.execute_sql("""select machine from equipment
+                                where issuable='1'
+                                and department in %s;"""%(dpt))
         z=list(x.fetchall())
-        print(z)
         for mach in z:
             self.machines.append(mach[0])
+        x=self.db.execute_sql("""select machine_id from item_issue
+                                where issue='1';""")
+        z=list(x.fetchall())
+        for mach in z:
+            self.machines.remove(mach[0])
         self.id_opt.value_config(self.machines)
         self.id.set("")
         self.ret_type.set(False)
